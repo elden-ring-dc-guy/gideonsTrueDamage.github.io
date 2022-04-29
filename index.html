@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="https://unpkg.com/vue@3"></script>-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="views/input_form.js"></script>
+    <script src="views/class_weapon_attribute_input_form.js"></script>
+    <script src="views/weapon_attribute_input_form.js"></script>
+    <script src="views/weapon_attribute_damage_input_form.js"></script>
+    <script src="views/result_form.js"></script>
+    <script src="views/error_result_form.js"></script>
+    <script src="views/weapon_result_form.js"></script>
+    <script src="views/attribute_result_form.js"></script>
+    <script src="views/class_result_form.js"></script>
+    <script src="views/progress_bar.js"></script>
+    <script src="views/main.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<video loop autoplay playsinline disablepictureinpicture muted class="video_background">
+    <source src="https://static.bandainamcoent.eu/video/elden-ring-header-animated.mp4" type="video/mp4">
+</video>
+<div id="master-band">
+    <div id="header">
+        <img src="assets/gideon.png" height="100">
+        <h1>
+            GIDEON'S TRUE DAMAGE OPTIMIZER
+        </h1>
+        <div class="empty">
+        </div>
+    </div>
+    <div id="band">
+    </div>
+    <div id="footer">
+        <small>&copy; Copyright 2022, All rights reserved. Patch 1.04</small><a href="https://twitter.com/VadimTheNatilus">"Gideon's Portrait" by Vladim</a>
+    </div>
+</div>
+<script>
+var main = Vue.createApp(Main);
+main.component('inputForm', inputForm);
+main.component('classWeaponAttributeInputForm', classWeaponAttributeInputForm);
+main.component('weaponAttributeInputForm', weaponAttributeInputForm);
+main.component('weaponAttributeDamageInputForm', weaponAttributeDamageInputForm);
+main.component('resultForm', resultForm);
+main.component('errorResultForm', errorResultForm);
+main.component('weaponResultForm', weaponResultForm);
+main.component('attributeResultForm', attributeResultForm);
+main.component('classResultForm', classResultForm);
+main.component('progressBar', progressBar);
+main.mount("#band");
+</script>
+</body>
+</html>

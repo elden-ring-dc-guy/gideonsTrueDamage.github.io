@@ -1,0 +1,320 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: black /*#090f0e*/;
+    font-family: Optimus;
+    /*font-style: italic;*/
+    color: goldenrod;
+    padding: 10px;
+}
+
+a {
+     cursor:pointer;
+     color:orange;
+     text-decoration:underline;
+}
+
+input[type='number'] {
+    width: 40px;
+}
+
+button {
+    align-self: flex-start;
+}
+
+select {
+    width: 100%;
+}
+
+#master-band {
+    display: flex;
+    flex-direction: column;
+    min-height: 96vh;
+}
+
+#header {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: goldenrod;
+}
+
+#header > .empty {
+    width: 129px;
+    height: 100px;
+}
+
+#footer {
+    background: #42444e;
+    color: #ddd;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+#band {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+#navigation {
+    width: 150px;
+    flex: none;
+}
+
+#navigation ul {
+    padding-inline-start:0;
+}
+
+#navigation li {
+    list-style: none;
+    margin: 20px 0;
+}
+
+#content {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 50px;
+}
+
+#ad {
+    width: 150px;
+    flex: none;
+}
+
+.video_background {
+    height:100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.2;
+    /* to center the frame */
+    transform: translate(-50%, 0px);
+    left: 50%;
+}
+
+.selectNoScroll {
+    overflow: hidden;
+}
+
+.runes {
+    display: flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 0;
+    min-width: 100%;
+}
+
+.runes img {
+    height: 150px;
+}
+
+.optimal_weapon_attribute_form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.optimal_weapon_attribute_form > div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.elden_sheet {
+    background-image: linear-gradient(black, #1d1b0c, #505050);
+    opacity: 0.8;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.weapon_result {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.weapon_result > div:not(:first-child) {
+    color: tan;
+}
+
+.damage_result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: gold;
+    animation: fire 2.0s infinite alternate;
+}
+
+.attribute_result {
+    font-size: 50px;
+    color: white;
+}
+
+.attribute_result > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.attribute_result > div > *:nth-child(odd) {
+    text-align: left;
+}
+
+.attribute_result > div > *:nth-child(even) {
+    text-align: right;
+}
+
+.class_result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.class_result > * {
+    flex: 1;
+}
+
+.error_result {
+    align-self: center;
+    text-align: center;
+}
+
+@keyframes fire
+{
+   0%
+   {
+       text-shadow:
+       5px -25px 50px yellow,
+       0 0px 20px red,
+       10px -15px 15px orange;
+   }
+   33%
+   {
+       text-shadow:
+       0 -20px 30px yellow,
+       15px -5px 20px red,
+       5px 0 20px orange;
+   }
+   66%
+   {
+       text-shadow:
+       10px -25px 50px yellow,
+       5px -10px 20px red,
+       0 -5px 20px orange;
+   }
+   100%
+   {
+       text-shadow:
+       0 -20px 50px yellow,
+       5px -15px 20px red,
+       10px 0 20px orange;
+   }
+}
+
+.filler {
+}
+
+.weapon_data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.weapon_data > div {
+    min-width: 50%;
+    flex: auto;
+}
+
+.attribute_scaling {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.attribute_scaling > div {
+    flex: 1;
+}
+
+.stat_box {
+    color: white;
+    border-left-style: groove;
+    border-left-color: orange;
+    padding-left: 5px;
+}
+
+.col_2_flex {
+    color: white;
+    border-left-style: groove;
+    border-left-color: orange;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.col_2_flex > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col_2_flex > div > *:nth-child(odd) {
+    display: flex;
+    flex-direction: row;
+}
+
+.col_2_flex > div > *:nth-child(even) {
+    display: flex;
+    flex-direction: row;
+}
+
+.col_2 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.col_4 {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.col_4 > * {
+    padding-right: 20px;
+}
+
+.col_6 {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+}
+
+.stat_box > *:nth-child(odd) {
+    text-align: left;
+}
+
+.stat_box > *:nth-child(even) {
+    text-align: right;
+}
