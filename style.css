@@ -32,7 +32,7 @@ select {
 
 .ad {
     width: 100%;
-    min-height: 150px;
+    height: 100px;
 }
 
 #master-band {
